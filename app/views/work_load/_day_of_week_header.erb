@@ -14,6 +14,6 @@
     end
   %>
   <th class="day-of-week <%= klass %>" scope="col">
-    <%= day_name(currentDay.cwday).first %>
+    <%= I18n.locale.to_s == 'zh' ? day_name(currentDay.cwday).last : day_name(currentDay.cwday).first %>
   </th>
 <% end %>
