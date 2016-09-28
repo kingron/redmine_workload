@@ -14,7 +14,7 @@
   %>
   <td class="<%= klass %>">
       <span>
-        <%= sprintf("%.1f", totalWorkload[day][:hours]) %>
+        <%= totalWorkload[day][:hours] > 0.01 ? sprintf("%.1f", totalWorkload[day][:hours]) : "" %>
       </span>
   </td>
 <% end %>
